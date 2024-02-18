@@ -1,11 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peace Pahibahan</title>
-</head>
-<body>
-    
-</body>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peace Paribahan</title>
+
+    <!-- Add Tailwind & DaisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <!-- Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Custom color -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "btn-primary": "#FF4240",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .raleway {
+        font-family: "Raleway", sans-serif;
+      }
+      .inter {
+        font-family: "Inter", sans-serif;
+      }
+
+      .banner {
+        background-image: linear-gradient(
+            180deg,
+            rgba(3, 7, 18, 0.5) 0%,
+            rgba(3, 7, 18, 0) 100%
+          ),
+          url(images/banner.png);
+        background-position: center;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="w-[90%] lg:max-w-[1170px] mx-auto lg:my-10 lg:relative">
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <a
+              class="btn btn-ghost text-[25px] -ml-6 lg:-ml-4 lg:text-3xl font-extrabold raleway"
+              >P-Ticket</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-base font-normal">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn bg-[#1DD1001A] text-[#1DD100] text-2xl border-[#1dd10066] hover:text-black"
+              >Bus <img src="images/bus-icon.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+
+      <!--Banner -->
+      <div class="w-full lg:mt-8 text-center lg:relative">
+        <div
+          class="banner lg:w-full mt-2 lg:mt-6 bg-cover bg-no-repeat p-4 lg:p-8 lg:h-[550px] rounded-[15px] lg:rounded-[32px]"
+        >
+          <h1
+            class="text-center text-[20px] lg:text-[54px] font-bold raleway mt-8 lg:mt-[70px] text-white"
+          >
+            End-to-End Travel with
+          </h1>
+          <h1
+            class="text-center text-[20px] lg:text-[54px] font-bold raleway text-[#1DD100]"
+          >
+            Peace Paribahan
+          </h1>
+          <p class="text-center inter text-[12px] lg:text-[18px] text-white">
+            Yes, you can run unit tests and view the results directly within the
+            app. <br />
+            The integrated testing features allow for a streamlined .
+          </p>
+          <button
+            class="btn p-4 rounded-md bg-[#1DD100] text-black border-none mt-8 raleway"
+          >
+            Buy Tickets
+          </button>
+        </div>
+
+        <div
+          class="lg:w-[280px] border-solid border-b-4 border-[#1DD100] justify-evenly flex gap-6 lg:gap-3 mx-auto text-black bg-white rounded-[24px] lg:absolute lg:top-[30rem] lg:left-[6rem] p-2 lg:p-8"
+        >
+          <img class="lg:w-[64px] w-10" src="images/people.png" alt="" />
+          <div>
+            <h4 class="lg:text-[26px] text-[16px]  font-bold">500K+</h4>
+            <p class="text-[14px] font-medium text-[#03071299] mt-2">
+              Registered users
+            </p>
+          </div>
+        </div>
+        <div
+          class="lg:w-[280px] border-solid border-b-4 border-[#1DD100] justify-evenly flex gap-6 lg:gap-3 mx-auto text-black bg-white rounded-[24px] lg:absolute lg:top-[30rem] lg:left-[28rem] p-2 lg:p-8"
+        >
+          <img class="lg:w-[64px] w-10" src="images/ticket-cupon.png" alt="" />
+          <div>
+            <h4 class="lg:text-[26px] text-[16px]  font-bold">1.7 lacks</h4>
+            <p class="text-[14px] font-medium text-[#03071299] mt-2">
+              Tickets sold
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="lg:w-[280px] border-solid border-b-4 border-[#1DD100] justify-evenly flex gap-6 lg:gap-3 mx-auto text-black bg-white rounded-[24px] lg:absolute lg:top-[30rem] lg:left-[50rem] p-2 lg:p-8"
+        >
+          <img class="lg:w-[64px] w-10" src="images/stoppage.png" alt="" />
+          <div>
+            <h4 class="lg:text-[26px] text-[16px]  font-bold">80K+</h4>
+            <p class="text-[14px] font-medium text-[#03071299] mt-2">
+              Rental partners
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+
+      <!-- Best offers for you Section -->
+
+
+
+
+
+
+
+    </main>
+  </body>
 </html>
