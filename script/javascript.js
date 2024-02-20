@@ -1,38 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const allBtn = document.getElementsByClassName("add-btn");
 let count = 0;
 
@@ -60,15 +25,6 @@ for (const seat of seatsAll) {
     selectSeats.appendChild(li);
   });
 }
-
-
-
-
-
-
-
-
-
 
 // const allBtn = document.getElementsByClassName("add-btn");
 // let count = 0;
