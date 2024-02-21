@@ -61,6 +61,14 @@
         background-position: center;
         overflow: hidden;
       }
+
+      .selected-seats {
+        font-size: 18px;
+        color: #03071280;
+        display: flex;
+        justify-content: space-between;
+        gap: 140px;
+      }
     </style>
   </head>
   <body>
@@ -221,7 +229,7 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-outline text-[#1DD100] text-[22px] mt-[62px]">
+        <button class="btn btn-outline text-[#1DD100] text-[22px] my-[62px]">
           See All Offers
         </button>
       </section>
@@ -230,9 +238,9 @@
 
       <section
         id="section1"
-        class="lg:w-full h-[1800px] bg-[#F7F8F8] rounded-t-[70px] border-t-lime-500 mt-16 border-solid border-t-4"
+        class="lg:w-full bg-[#F7F8F8] rounded-t-[70px] border-t-lime-500 border-solid border-t-4 py-20"
       >
-        <div class="w-[90%] lg:max-w-[1170px] mx-auto lg:mt-30">
+        <div class="w-[90%] lg:max-w-[1170px] m-auto lg:mt-30">
           <div class="">
             <div class="pb-10 text-center">
               <h1 class="text-[40px] raleway mb-[20px] pt-[80px]">
@@ -263,6 +271,7 @@
                     <div class="">
                       <button class="btn text-[#1DD100] bg-[#d0f0d6d9]">
                         <img src="images/seat-green.png" alt="" />
+                        <!-- seats left -->
                         <span id="seats-left">36</span> Seats left
                       </button>
                     </div>
@@ -308,7 +317,10 @@
 
                 <div class="m-auto">
                   <img class="m-auto" src="images/fare.png" alt="" />
-                  <h1 class="text-[32px] raleway font-bold pt-6">550 Taka</h1>
+                  <!-- per seat -->
+                  <h1 class="text-[32px] raleway font-bold pt-6">
+                    <span id="perSeat">550</span> Taka
+                  </h1>
                   <p class="text-[#00010266] raleway text-[20px] text-center">
                     Per Seat
                   </p>
@@ -321,13 +333,12 @@
         <!-- select your seat -->
 
         <div
-          class="w-[90%] lg:max-w-[1170px] mx-auto lg:mt-12 bg-white rounded-[24px] p-6 flex mb-8"
+          class="w-[90%] lg:max-w-[1170px] m-auto lg:mt-12 bg-white rounded-[24px] p-6 flex"
         >
           <!-- 1st -->
+
           <div class="flex-1">
-            <div
-              class="lg:max-w-[673px] border-r-2 pr-8 border-dashed border-[#0307124d]"
-            >
+            <div class="lg:max-w-[673px]">
               <div class="flex justify-between">
                 <p class="text-black text-[18px] font-bold">Select Your Seat</p>
               </div>
@@ -348,264 +359,113 @@
               </div>
 
               <!-- seat -->
-              <div class="flex justify-between mt-10 allSeat">
-                <div class="flex gap-8">
-                  <p class="text-[18px] text-[#03071280] mt-4">A</p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    A1
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    A2
-                  </p>
-                </div>
+              <div>
+                <div class="flex justify-between mt-10">
+                  <div class="flex gap-8">
+                    <p class="text-[18px] text-[#03071280] mt-4">A</p>
 
-                <div class="flex gap-8">
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    A3
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    A4
-                  </p>
-                </div>
-              </div>
-              <div class="flex justify-between mt-10">
-                <div class="flex gap-8">
-                  <p class="text-[18px] text-[#03071280] mt-4">B</p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    B1
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    B2
-                  </p>
-                </div>
+                    <div>
+                      <p
+                        class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
+                      >
+                        A1
+                      </p>
 
-                <div class="flex gap-8">
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    B3
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    B4
-                  </p>
-                </div>
-              </div>
-              <div class="flex justify-between mt-10">
-                <div class="flex gap-8">
-                  <p class="text-[18px] text-[#03071280] mt-4">C</p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    C1
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    C2
-                  </p>
-                </div>
+                      <span class="hidden selected-seats">Economoy</span>
+                      <span class="hidden selected-seats">550</span>
+                    </div>
 
-                <div class="flex gap-8">
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    C3
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    C4
-                  </p>
-                </div>
-              </div>
-              <div class="flex justify-between mt-10">
-                <div class="flex gap-8">
-                  <p class="text-[18px] text-[#03071280] mt-4">D</p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    D1
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    D2
-                  </p>
-                </div>
+                    <div>
+                      <p
+                        class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
+                      >
+                        A2
+                      </p>
 
-                <div class="flex gap-8">
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    D3
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    D4
-                  </p>
-                </div>
-              </div>
+                      <span class="hidden selected-seats">Economoy</span>
+                      <span class="hidden selected-seats">550</span>
+                    </div>
+                  </div>
 
-              <div class="flex justify-between mt-10">
-                <div class="flex gap-8">
-                  <p class="text-[18px] text-[#03071280] mt-4">E</p>
-                  <p
-                    class="add-btn px-11 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    E1
-                  </p>
-                  <p
-                    class="add-btn px-11 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    E2
-                  </p>
-                </div>
+                  <div class="flex gap-8">
+                    <div>
+                      <p
+                        class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
+                      >
+                        A3
+                      </p>
 
-                <div class="flex gap-8">
-                  <p
-                    class="add-btn px-11 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    E3
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    E4
-                  </p>
-                </div>
-              </div>
-              <div class="flex justify-between mt-10">
-                <div class="flex gap-8">
-                  <p class="text-[18px] text-[#03071280] mt-4">F</p>
-                  <p
-                    class="add-btn px-11 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    F1
-                  </p>
-                  <p
-                    class="add-btn px-11 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    F2
-                  </p>
-                </div>
+                      <span class="hidden selected-seats">Economoy</span>
+                      <span class="hidden selected-seats">550</span>
+                    </div>
+                    <div>
+                      <p
+                        class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
+                      >
+                        A4
+                      </p>
 
-                <div class="flex gap-8">
-                  <p
-                    class="add-btn px-11 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    F3
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    F4
-                  </p>
+                      <span class="hidden selected-seats">Economoy</span>
+                      <span class="hidden selected-seats">550</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="flex justify-between mt-10">
-                <div class="flex gap-8">
-                  <p class="text-[18px] text-[#03071280] mt-4">G</p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    G1
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    G2
-                  </p>
-                </div>
+                <div class="flex justify-between mt-10">
+                  <div class="flex gap-8">
+                    <p class="text-[18px] text-[#03071280] mt-4">B</p>
+                    <div>
+                      <p
+                        class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
+                      >
+                        B1
+                      </p>
 
-                <div class="flex gap-8">
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    G3
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    G4
-                  </p>
-                </div>
-              </div>
-              <div class="flex justify-between mt-10">
-                <div class="flex gap-8">
-                  <p class="text-[18px] text-[#03071280] mt-4">H</p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    H1
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    H2
-                  </p>
-                </div>
+                      <span class="hidden selected-seats">Economoy</span>
+                      <span class="hidden selected-seats">550</span>
+                    </div>
+                    <div>
+                      <p
+                        class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
+                      >
+                        B2
+                      </p>
 
-                <div class="flex gap-8">
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    H3
-                  </p>
-                  <p
-                    class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    H4
-                  </p>
-                </div>
-              </div>
-              <div class="flex justify-between mt-10">
-                <div class="flex gap-8">
-                  <p class="text-[22px] mr-2 text-[#03071280] mt-4">I</p>
-                  <p
-                    class="add-btn px-11 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    I1
-                  </p>
-                  <p
-                    class="add-btn px-11 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    I2
-                  </p>
-                </div>
+                      <span class="hidden selected-seats">Economoy</span>
+                      <span class="hidden selected-seats">550</span>
+                    </div>
+                  </div>
 
-                <div class="flex gap-8">
-                  <p
-                    class="add-btn px-11 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    I3
-                  </p>
-                  <p
-                    class="add-btn px-11 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
-                  >
-                    I4
-                  </p>
+                  <div class="flex gap-8">
+                    <div>
+                      <p
+                        class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
+                      >
+                        B3
+                      </p>
+                      <span class="hidden selected-seats">Economoy</span>
+                      <span class="hidden selected-seats">550</span>
+                    </div>
+                    <div>
+                      <p
+                        class="add-btn px-10 py-3 rounded-md hover:bg-[#0307121A] text-[18px] text-[#03071280] bg-[#0307120d]"
+                      >
+                        B4
+                      </p>
+
+                      <span class="hidden selected-seats">Economoy</span>
+                      <span class="hidden selected-seats">550</span>
+                    </div>
+                  </div>
+                  <!-- C -->
                 </div>
               </div>
             </div>
           </div>
 
           <!-- 2nd -->
-          <div class="flex-1 pl-4 lg:max-w-[497px]">
+          <div
+            class="flex-1 pl-4 lg:max-w-[497px] border-l-2 ml-8 border-dashed border-[#0307124d]"
+          >
             <div class="">
               <div>
                 <div>
@@ -620,9 +480,10 @@
               <div class="flex justify-between mt-4">
                 <h1 class="text-[18px] font-bold">
                   Seat
+                  <!-- selected seat -->
                   <button
+                    id="select-seat"
                     class="px-3 rounded-lg text-[12px] text-white bg-[#1DD100]"
-                    id="seat-count"
                   >
                     0
                   </button>
@@ -636,28 +497,39 @@
               <hr class="border-dashed mt-4 bg-[#33333399]" />
 
               <div class="flex justify-between mt-4">
-                <ol id="title-seats" class="text-[18px] text-[#03071280]"></ol>
-                <!-- <h1 class="text-[18px] text-[#03071280]">A1</h1>
-                <h2 class="text-[18px] text-[#03071280]">Economy</h2>
-                <h1 class="text-[18px] text-[#03071280]">550</h1> -->
+                <!-- append div -->
+                <div
+                  id="selected-seat-container"
+                  class="text-[18px] text-[#03071280]"
+                ></div>
               </div>
               <hr class="border-solid border-slate-950 mt-4 bg-[#33333399]" />
 
               <div class="flex justify-between mt-4">
                 <h1 class="text-[18px] font-bold">Total Price</h1>
                 <h2 class="text-[18px] text-[#03071280]">-</h2>
-                <h1 class="text-[18px] font-bold">BDT 550</h1>
+                <!-- total price -->
+                <h1 class="text-[18px] font-bold">
+                  BDT <span id="total-price">0</span>
+                </h1>
               </div>
 
               <label
                 class="input input-bordered flex items-center p-8 mt-6 border-none"
               >
+                <!-- coupon code -->
                 <input
+                  id="coupon-code"
                   type="text"
                   class="grow"
                   placeholder="Have any coupon?"
                 />
-                <button class="btn px-5 text-[18px] text-white bg-[#1DD100]">
+                <!-- apply btn -->
+                <button
+                  onclick="updateGrandTotal('apply-btn')"
+                  id="apply-btn"
+                  class="btn px-5 text-[18px] text-white bg-[#1DD100]"
+                >
                   Apply
                 </button>
               </label>
@@ -665,7 +537,10 @@
               <div class="flex justify-between mt-4">
                 <h1 class="text-[18px] font-bold">Grand Total</h1>
                 <h2 class="text-[18px] text-[#03071280]">-</h2>
-                <h1 class="text-[18px] font-bold">BDT 1100</h1>
+                <!-- Grand Total -->
+                <h1 class="text-[18px] font-bold">
+                  BDT <span id="grand-total">0</span>
+                </h1>
               </div>
             </div>
             <div class="mt-6">
@@ -692,8 +567,6 @@
                 class="input input-bordered w-full max-w-full p-8 mt-4 text-xl"
               />
             </div>
-
-            <!-- <button class="btn btn-wide w-full mt-4 text-[20px] text-white bg-[#1DD100]">Next</button> -->
 
             <!-- Open the modal using ID.showModal() method -->
             <button
@@ -744,39 +617,41 @@
       </section>
     </main>
 
-    <footer class="p-4 pb-10 text-neutral-content w-full bg-black">
-      <div
-        class="w-[90%] lg:max-w-[1170px] mx-auto pt-[80px] flex justify-between"
-      >
-        <div>
-          <aside class="">
-            <h1 class="text-[20px] font-bold text-white">P-Ticket</h1>
-            <p class="mt-4">
-              P-Ticket is a digital platform to make your <br />
-              daily commuting better.
-            </p>
-          </aside>
+    <footer class="w-full">
+      <div class="pb-20 text-neutral-content bg-black">
+        <div
+          class="w-[90%] lg:max-w-[1170px] m-auto pt-[80px] flex justify-between"
+        >
+          <div>
+            <aside class="">
+              <h1 class="text-[20px] font-bold text-white">P-Ticket</h1>
+              <p class="mt-4">
+                P-Ticket is a digital platform to make your <br />
+                daily commuting better.
+              </p>
+            </aside>
+          </div>
+          <div>
+            <nav class="md:place-self-center md:justify-self-end">
+              <h1 class="text-[16px] font-bold text-white">Download our app</h1>
+              <a href="#"
+                ><img class="mt-4" src="images/Group 104.png" alt=""
+              /></a>
+            </nav>
+          </div>
         </div>
-        <div>
-          <nav class="md:place-self-center md:justify-self-end">
-            <h1 class="text-[16px] font-bold text-white">Download our app</h1>
-            <a href="#"
-              ><img class="mt-4" src="images/Group 104.png" alt=""
-            /></a>
-          </nav>
+        <div class="mt-10 lg:max-w-[1170px] mx-auto">
+          <hr class="border-dashed" />
         </div>
-      </div>
-      <div class="mt-10 lg:max-w-[1170px] mx-auto">
-        <hr class="border-dashed" />
-      </div>
 
-      <div class="mt-10 lg:max-w-[1170px] mx-auto flex justify-between">
-        <p>@all rights reserved, P-Ticket services limited.2024</p>
+        <div class="mt-10 lg:max-w-[1170px] mx-auto flex justify-between">
+          <p>@all rights reserved, P-Ticket services limited.2024</p>
 
-        <div class="flex gap-4">
-          <a href="#">Terms & condition</a>
-          <a href="#">Return & refund policy</a>
-          <a href="#">Privacy policy</a>
+          <div class="flex gap-4">
+            <a href="#">Terms & condition</a>
+            <a href="#">Return & refund policy</a>
+            <a href="#">Privacy policy</a>
+          </div>
         </div>
       </div>
     </footer>
