@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,19 +29,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Tailwind Custom color -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "btn-primary": "#FF4240",
-            },
-          },
-        },
-      };
-    </script>
 
     <style>
       .raleway {
@@ -861,6 +848,8 @@
                 />
                 <!-- apply btn -->
                 <button
+                  disabled
+                  id="apply-coupon-btn"
                   onclick="updateGrandTotal('apply-btn')"
                   class="btn px-5 text-[18px] text-white bg-[#1DD100]"
                 >

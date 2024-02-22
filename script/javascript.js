@@ -18,7 +18,11 @@ for (const seat of allSeat) {
     event.target.classList.add("disabled");
 
     const seatCount = getConvertedValue("select-seat");
-    if (seatCount + 1 > 8) {
+    if (seatCount + 1 > 3) {
+      const applyCouponBtn = document.getElementById("apply-coupon-btn");
+      applyCouponBtn.removeAttribute("disabled");
+    }
+    if (seatCount + 1 > 4) {
       alert("Seat limit is over");
       return;
     }
